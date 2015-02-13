@@ -7,9 +7,24 @@ There is also an user configurable min and max height option, so at a certain si
 
 It is exposed as an requirejs amd. 
 Example usage. See it here <a href="http://snatesan.github.io/flexibletextarea" target="_blank">live</a>
+
+<code>
+&lt;textarea id="flexible_input" data-minheight="100" data-maxheight="400"&gt;&lt;/textarea&gt;
+</code>
 ```javascript
 requirejs(["lib/flexibledecorator"], function(flexible) {
 	flexible(document.getElementById("flexible_input"));
+});
+```
+
+or
+
+<code>
+&lt;textarea id="flexible_input"&gt;&lt;/textarea&gt;
+</code>
+```javascript
+requirejs(["lib/flexibledecorator"], function(flexible) {
+	flexible(document.getElementById("flexible_input"), 100, 400);
 });
 ```
 
